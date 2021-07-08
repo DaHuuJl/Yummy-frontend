@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.default-block {
+  margin: 0;
+  padding: 0;
+}
+
+.logo-block {
+  position: relative;
+  display: inline-block;
+}
+
+span.logo-block {
+  position: absolute;
+  margin-top: 47%;
+  left: 35%;
+  text-align: center;
+  color: black;
+  font-family: Rozha One, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 96px;
+}
+
+img.logo-block {
+  margin-top: 25%;
+  text-align: center;
+  height: 570px;
+  width: 880px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

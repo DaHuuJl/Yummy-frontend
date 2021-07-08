@@ -1,4 +1,4 @@
-html, body {
+app-login, router-outlet {
   margin: 0;
   padding: 0;
   width: 100%;
