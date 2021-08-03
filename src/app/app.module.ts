@@ -9,6 +9,14 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from "@angular/material/button";
+import { MenuComponent } from './menu/menu.component';
+import { BasketComponent } from './basket/basket.component';
+import { ProfileComponent } from './profile/profile.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+
+
 
 @NgModule({
   declarations: [
@@ -16,7 +24,13 @@ import {MatButtonModule} from "@angular/material/button";
     LoginComponent,
     RegistrationComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MenuComponent,
+    BasketComponent,
+    ProfileComponent,
+    NotFoundComponent,
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
