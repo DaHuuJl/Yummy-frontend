@@ -1,3 +1,40 @@
 <div class="default-block auth">
+  <div class="auth-block">
+    <p class="heading"> Регистрация </p>
+    <form class="form-auth">
 
+      <mat-form-field class="example-full-width form-auth-fields" appearance="fill">
+        <mat-label style="">ФИО</mat-label>
+        <input matInput
+               type="text"
+               placeholder="Введите ваше ФИО" value="">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width form-auth-fields" appearance="fill">
+        <mat-label style=""> Номер телефона </mat-label>
+        <input matInput
+               type="tel"
+               placeholder="+7 999-999-99-99">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width form-auth-fields" appearance="fill">
+        <mat-label style=""> Пароль </mat-label>
+        <input matInput
+               type="password"
+               placeholder="Введите пароль" value="">
+      </mat-form-field>
+
+      <div class="button-cent" style="padding-top: 40px">
+        <button mat-raised-button color="primary"
+        class="auth"
+        >Зарегистрироваться</button>
+
+        <button mat-raised-button color="primary"
+                class="auth"
+                (click)="goLogin()"
+        >У Вас есть аккаунт?</button>
+      </div>
+
+    </form>
+  </div>
 </div>

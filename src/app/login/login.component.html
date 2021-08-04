@@ -1,10 +1,33 @@
-<div class="block-left default-block">
-  <div class="logo-block">
-    <img class="logo-block" src="./assets/Smear_option_1.png" alt="Обновите Ваш браузер">
-    <span class="logo-block default-block">Yummy</span>
+<div class="default-block auth">
+  <div class="auth-block-2">
+    <p class="heading"> Авторизация </p>
+    <form class="form-auth">
+
+      <mat-form-field class="example-full-width form-auth-fields" appearance="fill">
+        <mat-label style=""> Номер телефона </mat-label>
+        <input matInput
+               type="tel"
+               placeholder="+7 999-999-99-99" value="">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width form-auth-fields" appearance="fill">
+        <mat-label style=""> Пароль </mat-label>
+        <input matInput
+               type="password"
+               placeholder="Введите пароль" value="">
+      </mat-form-field>
+
+      <div class="button-cent" style="padding-top: 40px">
+        <button mat-raised-button color="primary"
+                class="auth"
+        >Войти</button>
+
+        <button mat-raised-button color="primary"
+                class="auth"
+                (click)="goRegistration()"
+        >У Вас нет аккаунта?</button>
+      </div>
+
+    </form>
   </div>
-</div>
-
-<div class="block-right default-block">
-
 </div>
