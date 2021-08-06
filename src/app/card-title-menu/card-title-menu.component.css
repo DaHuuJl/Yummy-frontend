@@ -1,0 +1,10 @@
+.card-title {
+  margin: 0 7% 100px  7%;
+  background: #edf0f1;
+  padding: 10px 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 40px 19px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 40px 19px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 40px 19px rgba(0, 0, 0, 0.2);
+  min-inline-size: 500px;
+}
