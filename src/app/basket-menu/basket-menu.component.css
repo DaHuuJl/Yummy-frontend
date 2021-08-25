@@ -1,0 +1,15 @@
+.card {
+  padding: 30px;
+  margin: 50px 7% 50px 7%;
+
+  height: 250px;
+
+  background: white;
+
+  border-radius: 25px;
+
+  -webkit-box-shadow: 0 3px 34px 7px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 3px 34px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 34px 7px rgba(0, 0, 0, 0.2);
+
+}

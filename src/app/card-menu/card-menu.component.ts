@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
 
+  openSnackBar() {
+    let x = document.getElementById("snackbar");
+    // @ts-ignore
+    x.className = "show";
+    setTimeout(function(){ // @ts-ignore
+      x.className = x.className.replace("show", ""); }, 3000);
+  }
 }

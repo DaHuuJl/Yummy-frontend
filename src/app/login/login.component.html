@@ -1,5 +1,10 @@
-<div class="default-block auth">
-  <div class="auth-block-2">
+<div class="center" *ngIf=!loading>
+  <mat-spinner></mat-spinner>
+</div>
+
+
+<div *ngIf=loading class="default-block block-bg">
+  <div class="auth-block" style="width: 460px; height: 350px;">
     <p class="heading"> Авторизация </p>
     <form class="form-auth">
 
@@ -12,9 +17,10 @@
 
       <mat-form-field class="example-full-width form-auth-fields" appearance="fill">
         <mat-label style=""> Пароль </mat-label>
-        <input matInput
-               type="password"
-               placeholder="Введите пароль" value="">
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
       </mat-form-field>
 
       <div class="button-cent" style="padding-top: 40px">
@@ -27,7 +33,16 @@
                 (click)="goRegistration()"
         >У Вас нет аккаунта?</button>
       </div>
-
     </form>
   </div>
+
+  <div class="button-circle-home ">
+    <button mat-fab
+            color="primary"
+            aria-label="Example icon button with a home icon"
+            (click)="goHome()">
+      <mat-icon>home</mat-icon>
+    </button>
+  </div>
+
 </div>

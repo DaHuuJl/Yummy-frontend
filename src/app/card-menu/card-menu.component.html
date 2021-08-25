@@ -1,5 +1,32 @@
 <div class="card-menu">
-  <span class="title">Анархия</span>
-  <img src="" alt="">
+  <p class="title">Анархия</p>
+
+  <div style="text-align: center;">
+    <img src="../../assets/va-bank.png" alt="">
+  </div>
+
+  <span class="description">
+    Состав:
+  </span>
+  <br>
+  <span class="description">
+    Грудка куриная копченая, корнишоны, маринованный лук, свинина, соус сливочно-сырный, сыр моцарелла.
+  </span>
+
+  <div style="line-height: 36px;">
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="radio-family">
+      <mat-button-toggle class="radio" checked value="">1 кг (33см)</mat-button-toggle>
+      <mat-button-toggle class="radio" value="">1,5 кг (41см)</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+   <div style="">
+    <button mat-raised-button color="primary"
+            style="width: 430px; height: 48px; position: center"
+            (click)="openSnackBar()"
+    >В корзину</button>
+  </div>
+
+  <div id="snackbar">Добавлено в корзину 🍕</div>
 
 </div>

@@ -8,12 +8,22 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  hide = true;
+  loading: boolean = false;
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.loading = true;
+    }, 700)
   }
 
   goRegistration(){
     this.router.navigate(['registration']).then(() => '');
+  }
+
+  goHome() {
+    this.router.navigate(['menu']).then(() => '');
   }
 }

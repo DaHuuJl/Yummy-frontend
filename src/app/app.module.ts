@@ -16,6 +16,17 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import {MatInputModule} from "@angular/material/input";
+import {MatIconModule} from "@angular/material/icon";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatMenuModule} from "@angular/material/menu";
+import {MatBadgeModule} from "@angular/material/badge";
+import {MatCardModule} from "@angular/material/card";
+import { CardTitleMenuComponent } from './card-title-menu/card-title-menu.component';
+import { CardMenuComponent } from './card-menu/card-menu.component';
+import {MatGridListModule} from "@angular/material/grid-list";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import { BasketMenuComponent } from './basket-menu/basket-menu.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 
 
@@ -31,14 +42,25 @@ import {MatInputModule} from "@angular/material/input";
     ProfileComponent,
     NotFoundComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    CardTitleMenuComponent,
+    CardMenuComponent,
+    BasketMenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatBadgeModule,
+    MatCardModule,
+    MatGridListModule,
+    MatButtonToggleModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

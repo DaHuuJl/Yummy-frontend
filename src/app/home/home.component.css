@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+.card {
+  padding: 20px 60px 60px 60px;
+  margin: 60px 30px 100px 310px;
+
+  width: 60%;
+  height: auto;
+
+  background: white;
+
+  border-radius: 25px;
+
+  -webkit-box-shadow: 0px 0px 35px 6px rgba(18, 40, 56, 0.2);
+  -moz-box-shadow: 0px 0px 35px 6px rgba(18, 40, 56, 0.2);
+  box-shadow: 0px 0px 35px 6px rgba(18, 40, 56, 0.2);
+
+}
+
+h1.title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 26px;
+}
+
+p.txt {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+}

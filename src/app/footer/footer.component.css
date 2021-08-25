@@ -1,0 +1,35 @@
+footer {
+  width: 100%;
+
+  background-color: whitesmoke;
+  -webkit-box-shadow: 0 3px 34px 7px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 3px 34px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 34px 7px rgba(0, 0, 0, 0.2);
+}
+
+hr.hr-shelf {
+  margin: -30px auto 10px;
+  padding: 0;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #1f1209;
+  box-shadow: 0 20px 20px -20px #333;
+  width: 95%;
+}
+
+.logo {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: center;
+  font-family: Rozha One, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 136px;
+  color: black;
+}
+
+
+
+

@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  slides = [
+    {'image': '../../assets/banner/banner1.png'},
+    {'image': '../../assets/banner/banner2.jpeg'},
+    {'image': '../../assets/banner/banner1.png'}
+  ];
+
+
   constructor() { }
 
   ngOnInit(): void {
