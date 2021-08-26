@@ -3,10 +3,9 @@
   margin: 50px 30px 30px 50px;
 
   width: 430px;
-  height: 580px;
+  max-height: 580px;
 
   background: white;
-
   border-radius: 25px;
 
   -webkit-box-shadow: 0 3px 34px 7px rgba(0, 0, 0, 0.2);
