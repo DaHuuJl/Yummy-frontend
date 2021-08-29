@@ -27,6 +27,9 @@ import {MatGridListModule} from "@angular/material/grid-list";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import { BasketMenuComponent } from './basket-menu/basket-menu.component';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
 
 
 
@@ -47,21 +50,24 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     CardMenuComponent,
     BasketMenuComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatInputModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatMenuModule,
-    MatBadgeModule,
-    MatCardModule,
-    MatGridListModule,
-    MatButtonToggleModule,
-    MatProgressSpinnerModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatInputModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatMenuModule,
+        MatBadgeModule,
+        MatCardModule,
+        MatGridListModule,
+        MatButtonToggleModule,
+        MatProgressSpinnerModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        MatAutocompleteModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

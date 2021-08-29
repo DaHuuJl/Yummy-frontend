@@ -8,6 +8,7 @@ import {RegistrationComponent} from "./registration/registration.component";
 import {AboutComponent} from "./about/about.component";
 import {NotFoundComponent} from "./not-found/not-found.component";
 import {HomeComponent} from "./home/home.component";
+import {HttpClientModule} from "@angular/common/http";
 
 const routes: Routes = [
   { path: 'menu', component: MenuComponent },

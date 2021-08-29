@@ -5,36 +5,59 @@
 <div *ngIf=loading class="default-block block-bg">
   <div class="auth-block" style="width: 460px; height: 450px;">
     <p class="heading"> Регистрация </p>
-    <form class="form-auth">
-
+    <form class="form-auth"
+          [formGroup]="form"
+          (ngSubmit)="OnSubmit()"
+          name="form">
       <mat-form-field class="example-full-width form-auth-fields" appearance="fill">
         <mat-label style="">ФИО</mat-label>
         <input matInput
+               name="fullName"
+               formControlName="fullName"
                type="text"
-               placeholder="Введите ваше ФИО" value="">
+               required
+               placeholder="" value="">
+        <mat-icon matSuffix>perm_identity</mat-icon>
+        <mat-hint>Введите ваше ФИО</mat-hint>
       </mat-form-field>
 
-      <mat-form-field class="example-full-width form-auth-fields" appearance="fill">
+      <mat-form-field
+          class="example-full-width form-auth-fields"
+          appearance="fill">
         <mat-label style=""> Номер телефона </mat-label>
         <input matInput
+               class="input-number"
+               name="tel"
+               id="tel"
                type="tel"
-               placeholder="+7 999-999-99-99">
+               formControlName="phoneNumber"
+               placeholder="999-999-99-99">
+        <mat-icon matSuffix>phone</mat-icon>
+        <mat-hint>Введите номер телефона</mat-hint>
       </mat-form-field>
 
       <mat-form-field class="example-full-width form-auth-fields" appearance="fill">
         <mat-label style=""> Пароль </mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'">
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <input matInput
+               name="password"
+               class="mask-phone"
+               formControlName="password"
+               required
+               [type]="hide ? 'password' : 'text'">
+        <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
+        <mat-hint>Должен содержать 8 символов, большу и маленькую букву латинского алфавита</mat-hint>
       </mat-form-field>
 
       <div class="button-cent" style="padding-top: 40px">
         <button mat-raised-button color="primary"
         class="auth"
+        type="submit"
         >Зарегистрироваться</button>
 
         <button mat-raised-button color="primary"
+                type="button"
                 class="auth"
                 (click)="goLogin()"
         >У Вас есть аккаунт?</button>
@@ -53,3 +76,13 @@
   </div>
 
 </div>
+
+
+<script>
+  let tel = document.querySelector('#tel')
+  let reg = /[A-Za-zА-Яа-яЁё]/g
+  tel.oninput = function () {
+    this.value = this.value.replace(reg, "")
+  }
+
+</script>
