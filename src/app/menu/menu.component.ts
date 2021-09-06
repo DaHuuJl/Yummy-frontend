@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition} from "@angular/material/snack-bar";
+import {ProductService} from "../shared/services/product.service";
+import {Product} from "../shared/interfaces";
 
 @Component({
   selector: 'app-menu',
@@ -7,10 +8,25 @@ import {MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition}
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  pizza: string = "Пицца"
+  drinks: string = "Напитки"
+  snacks: string = "Закуски"
+  sauces: string = "Соусы"
+  products : Product[] = []
 
-  constructor() { }
+  constructor(private productService: ProductService) {
+    productService.fetch().subscribe(
+      products => {
+        this.products = products
+      },
+      error => {
+        console.log(error)
+      }
+    )
+  }
 
   ngOnInit(): void {
+
   }
 
 }

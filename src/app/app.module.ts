@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {MatDialog, MAT_DIALOG_DATA, MatDialogModule} from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -30,6 +31,17 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import { WindowDialogRegistrationComponent } from './window-dialog-registration/window-dialog-registration.component';
+import { WindowDialogLoginComponent } from './window-dialog-login/window-dialog-login.component';
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
+import {MatSnackBar} from "@angular/material/snack-bar";
+import {OrderService} from "./shared/services/order-service";
+import {MatRippleModule} from "@angular/material/core";
+import { WindowDialogProfileErrorComponent } from './window-dialog-profile-error/window-dialog-profile-error.component';
+import {MatListModule} from "@angular/material/list";
+import { ProfileHistoryComponent } from './profile-history/profile-history.component';
+import {ImageToDataUrlModule} from "ngx-image2dataurl";
+import { BasketCheckComponent } from './basket-check/basket-check.component';
 
 
 
@@ -48,27 +60,49 @@ import {MatAutocompleteModule} from "@angular/material/autocomplete";
     HomeComponent,
     CardTitleMenuComponent,
     CardMenuComponent,
-    BasketMenuComponent
+    BasketMenuComponent,
+    WindowDialogRegistrationComponent,
+    WindowDialogLoginComponent,
+    WindowDialogProfileErrorComponent,
+    ProfileHistoryComponent,
+    BasketCheckComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatButtonModule,
-        MatInputModule,
-        MatIconModule,
-        MatToolbarModule,
-        MatMenuModule,
-        MatBadgeModule,
-        MatCardModule,
-        MatGridListModule,
-        MatButtonToggleModule,
-        MatProgressSpinnerModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        MatAutocompleteModule
-    ],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatBadgeModule,
+    MatCardModule,
+    MatGridListModule,
+    MatButtonToggleModule,
+    MatProgressSpinnerModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatAutocompleteModule,
+    MatDialogModule,
+    MatRippleModule,
+    MatListModule,
+    ImageToDataUrlModule
+  ],
+  providers: [
+    MatDialog,
+    MatSnackBar,
+    OrderService,
+    {
+    provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
+    useValue: {
+      duration: 41000,
+      horizontalPosition: 'right',
+      verticalPosition: 'bottom',
+      panelClass: 'snackBarInfo'
+    }
+
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

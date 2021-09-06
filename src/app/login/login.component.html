@@ -6,13 +6,17 @@
 <div *ngIf=loading class="default-block block-bg">
   <div class="auth-block" style="width: 460px; height: 350px;">
     <p class="heading"> Авторизация </p>
-    <form class="form-auth">
+    <form class="form-auth"
+          [formGroup]="form"
+          (ngSubmit)="OnSubmit()">
 
       <mat-form-field class="example-full-width form-auth-fields" appearance="fill">
         <mat-label style=""> Номер телефона </mat-label>
         <input matInput
                type="tel"
-               placeholder="999-999-99-99">
+               formControlName="phoneNumber"
+               placeholder="999-999-99-99"
+               required>
         <mat-icon matSuffix>phone</mat-icon>
         <mat-hint>Введите номер телефона</mat-hint>
       </mat-form-field>
@@ -20,6 +24,7 @@
       <mat-form-field class="example-full-width form-auth-fields" appearance="fill">
         <mat-label style=""> Пароль </mat-label>
         <input matInput
+               formControlName="password"
                required
                [type]="hide ? 'password' : 'text'">
         <mat-hint>Введите пароль</mat-hint>
@@ -27,7 +32,6 @@
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
       </mat-form-field>
-
       <div class="button-cent" style="padding-top: 40px">
         <button mat-raised-button color="primary"
                 class="auth"

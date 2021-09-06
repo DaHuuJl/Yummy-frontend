@@ -4,14 +4,15 @@
     <ul class="nav__links">
       <li><a href="">Доставка</a></li>
       <li><a href="menu">Меню</a></li>
-      <li><a href="about">О нас</a></li>
+
       <li><a href="https://vk.com/danyil.smirnov">Мой создатель</a></li>
     </ul>
   </nav>
 
   <div class="button-box">
-    <button matBadge="1" matBadgeOverlap="false" matBadgeSize="small"
-            mat-icon-button style="color: black" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <button [matBadge]="basketSize" matBadgeOverlap="false" matBadgeSize="small"
+            mat-icon-button style="color: black!important;" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+
       <mat-icon>menu</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
@@ -21,7 +22,7 @@
       </button>
       <button mat-menu-item (click)="goBasket()">
         <mat-icon>shopping_basket</mat-icon>
-        <span matBadge="1" matBadgeOverlap="false" matBadgeSize="small"
+        <span [matBadge]="basketSize" matBadgeOverlap="false" matBadgeSize="small"
         >Корзина</span>
       </button>
       <button mat-menu-item (click)="goExit()">

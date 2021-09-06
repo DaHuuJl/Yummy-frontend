@@ -1,3 +1,33 @@
 <div class="card">
+  <div style="float: left; margin-right: 30px">
+    <img src="{{order.product.image}}" alt="">
+  </div>
+
+  <div style="float: left; margin-right: 30px">
+    <p class="product-name">{{order.product.name}}</p>
+    <br>
+    <p class="product-description">Размер: {{size}}</p>
+    <p *ngIf="order.choice == 1" class="product-description">Цена за ед. товара: {{order.product.price_1}}</p>
+    <p *ngIf="order.choice == 2" class="product-description">Цена за ед. товара: {{order.product.price_2}}</p>
+    <p class="product-description">Количество: {{order.quantity}}</p>
+    <p *ngIf="order.choice == 1" class="product-description">Всего: {{order.product.price_1 * order.quantity}}</p>
+    <p *ngIf="order.choice == 2" class="product-description">Всего: {{order.product.price_2 * order.quantity}}</p>
+  </div>
+
+  <div style="float: right;">
+    <button mat-raised-button color="primary"
+            style="width: 260px; height: 48px; position: center; float: top; display: block;"
+            (click)="plus()"
+    >Увеличить</button>
+    <button mat-raised-button color="primary"
+            style="width: 260px; height: 48px; position: center; float: top; display: block; margin-top: 25px"
+            (click)="minus()"
+    >Уменьшить</button>
+    <button mat-raised-button color="warn"
+            style="width: 260px; height: 48px; position: center; float: top; display: block; margin-top: 25px"
+            (click)="delete()"
+    >Удалить</button>
+
+  </div>
 
 </div>

@@ -7,11 +7,10 @@ import {Observable} from "rxjs";
   providedIn: "root"
 })
 export class ProductService {
-  constructor(private http:HttpClient) {
 
-  }
+  constructor(private http:HttpClient) {}
 
-  fetch(): Observable<Product[]>{
+  fetch(): Observable<Product[]> {
     return this.http.get<Product[]>('/api/product/getAll')
   }
 }

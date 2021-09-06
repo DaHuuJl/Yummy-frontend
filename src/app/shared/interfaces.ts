@@ -1,7 +1,7 @@
 export enum ProductType {
-  PIZZA = "Пицца",
-  DRINKS ="Напитки",
-  SNACKS = "Закуски"
+  PIZZA = "PIZZA",
+  DRINKS ="DRINKS",
+  SNACKS = "SNACKS"
 }
 
 export interface Product {
@@ -27,4 +27,21 @@ export interface UserLog {
 
 export interface Token {
   token: string
+}
+
+export interface Order {
+  product: Product
+  choice: number
+  quantity: number
+}
+
+export interface LoginHistory {
+  browser: string
+  date: string
+}
+
+export interface User {
+  fullName: string
+  phoneNumber: string
+  image: string
 }

@@ -1,0 +1,7 @@
+<div class="card">
+  <p class="text" >Ваши посещения</p>
+  <mat-list *ngFor="let item of history; let i = index">
+    <mat-list-item>Вход: {{history[i].date}}, браузер {{history[i].browser}}</mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>

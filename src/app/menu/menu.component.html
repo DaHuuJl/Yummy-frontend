@@ -1,42 +1,28 @@
 <app-header></app-header>
 <div class="block-bg-h" style="min-height: 100%">
-
-
   <div class="page-content">
 
     <div class="content">
-      <app-card-title-menu></app-card-title-menu>
+      <app-card-title-menu [name]="pizza"></app-card-title-menu>
+      <div *ngFor="let product of products; let i = index">
+        <div *ngIf="product.productType == 'PIZZA'">
 
-      <app-card-menu></app-card-menu>
-      <app-card-menu></app-card-menu>
-      <app-card-menu></app-card-menu>
-
-      <app-card-menu></app-card-menu>
-      <app-card-menu></app-card-menu>
-      <app-card-menu></app-card-menu>
+          <app-card-menu [product]="product"></app-card-menu>
+        </div>
+      </div>
     </div>
 
     <div class="content">
-      <app-card-title-menu></app-card-title-menu>
+      <app-card-title-menu [name]="drinks"></app-card-title-menu>
+      <div *ngFor="let product of products; let i = index">
+        <div *ngIf="product.productType == 'DRINKS'">
 
-      <app-card-menu></app-card-menu>
-      <app-card-menu></app-card-menu>
-      <app-card-menu></app-card-menu>
-
-      <app-card-menu></app-card-menu>
+          <app-card-menu [product]="product"></app-card-menu>
+        </div>
+      </div>
     </div>
 
-    <div class="content">
-      <app-card-title-menu></app-card-title-menu>
 
-      <app-card-menu></app-card-menu>
-      <app-card-menu></app-card-menu>
-      <app-card-menu></app-card-menu>
-
-      <app-card-menu></app-card-menu>
-      <app-card-menu></app-card-menu>
-
-    </div>
   </div>
 </div>
 <app-footer></app-footer>

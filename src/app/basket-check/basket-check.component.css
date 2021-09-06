@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
-
 .card {
   padding: 30px;
-  margin: 50px 40px 50px 65px;
-  width: 750px;
+  margin: 50px 40% 60px 35%;
+
+  width: 500px;
+
   min-height: 150px;
 
   background: white;
@@ -16,13 +16,9 @@
   float: left;
 }
 
-img {
-  height: 200px;
-}
-
 .product-name {
   font-family: 'Open Sans', sans-serif;
-  font-size: 23px;
+  font-size: 30px;
 }
 
 .product-description {

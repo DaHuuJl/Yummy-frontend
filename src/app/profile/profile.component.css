@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+.card {
+  padding: 30px;
+  margin: 50px 7% 50px 7%;
+
+  min-height: 320px;
+
+  background: white;
+
+  border-radius: 25px;
+
+  -webkit-box-shadow: 0 3px 34px 7px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 3px 34px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 34px 7px rgba(0, 0, 0, 0.2);
+
+}
+
+img {
+  height: 250px;
+  width: 240px;
+  margin-right: 90px;
+  margin-left: 40px;
+}
+
+.block {
+  float: left;
+  display: block;
+  margin-right: 30px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.button-change {
+  margin: 20px 0 0 0;
+  float: left;
+  display: block;
+}
+
+.button-size {
+  width: 210px;
+}
+
+.text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+.file-upload input[type="file"]{
+
+  display: none;/* скрываем input file */
+
+}
+
+/* задаем стили кнопки выбора файла*/
+
+.file-upload {
+  position: relative;
+  overflow: hidden;
+  width: 210px;
+  height: 40px;
+  background: #3f51b5;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Растягиваем label на всю область блока .file-upload */
+
+.file-upload label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* стиль текста на кнопке*/
+
+.file-upload span {
+  line-height: 40px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
